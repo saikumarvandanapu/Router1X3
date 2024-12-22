@@ -1,0 +1,383 @@
+fc_output.txt
+
+
+ 
+                              Fusion Compiler (TM)
+
+                Version V-2023.12-SP4 for linux64 - Jun 03, 2024
+                           Base build date 2024/05/13
+
+                    Copyright (c) 1988 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+fc_shell> open_block /home1/BPD23/VandanapuSK/VLSI_PD/Fusion_compiler_labs/FC_LABS/Router/router1x3.dlib:routing_done.design
+Information: User units loaded from library 'saed32_hvt|saed32_hvt_std' (LNK-040)
+Opening block 'router1x3.dlib:routing_done.design' in edit mode
+fc_shell> link_block
+Using libraries: router1x3.dlib saed32_hvt saed32_lvt saed32_rvt
+Visiting block router1x3.dlib:routing_done.design
+Design 'router_top' was successfully linked.
+1
+fc_shell> check_legality
+
+************************
+
+running check_legality
+
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+        place.legalize.enable_prerouted_net_check: 1
+        place.legalize.num_tracks_for_access_check: 1
+        place.legalize.use_eol_spacing_for_access_check: 0
+        place.legalize.allow_touch_track_for_access_check: 1
+        place.legalize.reduce_conservatism_in_eol_check: 0
+        place.legalize.preroute_shape_merge_distance: 0.0
+        place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 2547 total shapes.
+Layer M2: cached 0 shapes out of 8985 total shapes.
+Cached 1748 vias out of 19103 total vias.
+
+check_legality for block design router_top ... 
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.6781 seconds to build cellmap data
+Information: Creating classic rule checker.
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+=====> Processed 77 ref cells (19 fillers) from library
+Design has no advanced rules
+Checking legality
+Checking cell legality:
+0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+Sorting rows.
+Checking spacing rule legality.
+0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+Checking packing rule legality.
+
+
+****************************************
+  Report : Legality
+****************************************
+
+VIOLATIONS BY CATEGORY:
+   MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+         0          0          0  Two objects overlap.
+         0          0          0  A cell violates a pnet.
+         0          0          0  A cell is illegal at a site.
+         0          0          0  A cell is not aligned with a site.
+         0          0          0  A cell has an illegal orientation.
+         0          0          0  A cell spacing rule is violated.
+         0          0          0  A layer rule is violated.
+         0          0          0  A cell is in the wrong region.
+         0          0          0  Two cells violate cts margins.
+         0          0          0  Two cells violate coloring.
+
+         0          0          0  TOTAL
+
+TOTAL 0 Violations.
+
+VIOLATIONS BY SUBCATEGORY:
+     MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+
+         0          0          0    Two objects overlap.
+           0          0          0    Two cells overlap.
+           0          0          0    Two cells have overlapping keepout margins.
+           0          0          0    A cell overlaps a blockage.
+           0          0          0    A cell keepout margin overlaps a blockage.
+
+         0          0          0    A cell violates a pnet.
+
+         0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates pin-track alignment rules.
+           0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates legal index rule.
+           0          0          0    A cell has the wrong variant for its location.
+
+         0          0          0    A cell is not aligned with a site.
+           0          0          0    A cell is not aligned with the base site.
+           0          0          0    A cell is not aligned with an overlaid site.
+
+         0          0          0    A cell has an illegal orientation.
+
+         0          0          0    A cell spacing rule is violated.
+           0          0          0    A spacing rule is violated in a row.
+           0          0          0    A spacing rule is violated between adjacent rows.
+           0          0          0    A cell violates vertical abutment rule.
+           0          0          0    A cell violates metal spacing rule.
+
+         0          0          0    A layer rule is violated.
+           0          0          0    A layer VTH rule is violated.
+           0          0          0    A layer OD rule is violated.
+           0          0          0    A layer OD max-width rule is violated.
+           0          0          0    A layer ALL_OD corner rule is violated.
+           0          0          0    A layer max-vertical-length rule is violated.
+           0          0          0    A layer TPO rule is violated.
+           0          0          0    Filler cell insertion cannot satisfy layer rules.
+
+         0          0          0    A cell is in the wrong region.
+           0          0          0    A cell is outside its hard bound.
+           0          0          0    A cell is in the wrong voltage area.
+           0          0          0    A cell violates an exclusive movebound.
+
+         0          0          0    Two cells violate cts margins.
+
+         0          0          0    Two cells violate coloring.
+
+
+check_legality for block design router_top succeeded!
+
+
+check_legality succeeded.
+
+**************************
+
+1
+fc_shell> report_congestion
+****************************************
+Report : congestion
+Design : router_top
+Version: V-2023.12-SP4
+Date   : Wed Dec 18 14:12:23 2024
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |     131 |     6 |     104  ( 1.08%) |       1
+H routing |      54 |     2 |      49  ( 1.02%) |       5
+V routing |      77 |     6 |      55  ( 1.15%) |       1
+
+1
+fc_shell> check_drc
+Error: unknown command 'check_drc' (CMD-005)
+fc_shell> check_pg_drc
+Command check_pg_drc started  at Wed Dec 18 14:13:50 2024
+Command check_pg_drc finished at Wed Dec 18 14:13:52 2024
+CPU usage for check_pg_drc: 1.78 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 1.78 seconds ( 0.00 hours)
+Total number of errors found: 1
+   1 insufficient spacing on M1
+------------
+Description of the errors can be seen in gui error set "DRC_report_by_check_pg_drc"
+------------
+fc_shell> report_parasitics
+Information: Timer using 1 threads
+Information: Corner ss_125c: no PVT mismatches. (PVT-032)
+Information: The stitching and editing of coupling caps is turned OFF for design 'router1x3.dlib:routing_done.design'. (TIM-125)
+Information: Design routing_done has 1517 nets, 0 global routed, 1515 detail routed. (NEX-024)
+Information: The RC mode used is DR for design 'router_top'. (NEX-022)
+---extraction options---
+Corner: ss_125c
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.enable_coupling_cap    : false
+Extracting design: routing_done 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 1515 nets are successfully extracted. (NEX-028)
+Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 1515, routed nets = 1515, across physical hierarchy nets = 0, parasitics cached nets = 1515, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    disabled
+************************************************************
+****************************************
+Report : parasitics
+        -late
+        -rise
+Module : router_top
+Mode   : func
+Corner : ss_125c
+Scenario: func.ss_125c
+Version: V-2023.12-SP4
+Date   : Wed Dec 18 14:22:04 2024
+****************************************
+
+Corner : ss_125c
+
+cap units: 1.00fF  res units: 1.00MOhm  time units: 1.00ns
+
+Current delay calculation style: auto
+Current min Elmore tau: 0.00s
+Current min Arnoldi tau: 2.00ps
+
+Total nets: 1515  RC networks: 1515 (100.00%)
+
+Grand total early parasitic network R: 0.056830  C: 2694.582463
+Grand total early lumped parasitic C: 2694.582467
+Grand total late parasitic network R: 0.056830  C: 2694.582463
+Grand total late lumped parasitic C: 2694.582467
+
+Average pins per network: 3.68
+Average caps per network: 19.91
+Average xCaps per network: 0.00
+Average resistors per network: 18.91
+Cap/pin ratio: 5.41
+
+Node count           Networks  Percentage
+(lower bound)
+-----------------------------------------
+0                    1         0.07%
+4                    1069      70.56%
+17                   193       12.74%
+29                   65        4.29%
+41                   47        3.10%
+54                   71        4.69%
+66                   28        1.91%
+78                   4         0.26%
+91                   6         0.40%
+103                  12        0.79%
+115                  11        0.73%
+127                  7         0.46%
+
+
+Total Capacitance    Networks  Percentage
+(lower bound)
+-----------------------------------------
+0.000000             15        0.99%
+0.155989             737       48.65%
+0.985594             341       22.51%
+1.815200             159       10.50%
+2.644805             118       7.79%
+3.474410             43        2.84%
+4.304015             30        2.05%
+5.133620             16        1.06%
+5.963225             11        0.73%
+6.792830             4         0.26%
+7.622435             3         0.20%
+8.452041             37        2.44%
+
+
+Total R*C            Networks  Percentage
+(lower bound)
+-----------------------------------------
+0.000000             9         0.59%
+0.000001             1254      82.77%
+0.000154             120       7.92%
+0.000307             48        3.17%
+0.000460             23        1.52%
+0.000613             12        0.79%
+0.000766             6         0.40%
+0.000919             2         0.13%
+0.001072             3         0.20%
+0.001225             1         0.07%
+0.001378             2         0.13%
+0.001532             35        2.31%
+
+
+Caps per pin         Networks  Percentage
+(lower bound)
+-----------------------------------------
+1.066667             1         0.07%
+2.000000             76        5.02%
+2.933333             113       7.46%
+3.866667             656       43.30%
+4.800000             261       17.23%
+5.733333             221       14.59%
+6.666667             86        5.68%
+7.600000             72        4.75%
+8.533333             16        1.06%
+9.466667             10        0.66%
+10.400000            1         0.07%
+11.333333            2         0.13%
+
+
+1
+fc_shell> report_parasitics -type cap
+Error: unknown option '-type' (CMD-010)
+fc_shell> report_pg_drc
+Error: unknown command 'report_pg_drc' (CMD-005)
+fc_shell> check_pg_drc
+Command check_pg_drc started  at Wed Dec 18 14:26:45 2024
+Command check_pg_drc finished at Wed Dec 18 14:26:46 2024
+CPU usage for check_pg_drc: 1.75 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 1.76 seconds ( 0.00 hours)
+Total number of errors found: 1
+   1 insufficient spacing on M1
+------------
+Description of the errors can be seen in gui error set "DRC_report_by_check_pg_drc"
+------------
+fc_shell> check_pg_connectivity
+Checking secondary net through power switch is enabled. 
+Secondary net will be checked together from primary net. They will be treated as the same net
+Primary Net : VDD    Secondary Net:
+Primary Net : VSS    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 1455
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 115
+Number of VDD Vias: 2238
+Number of VDD Terminals: 0
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Loading cell instances...
+Loading P/G wires and vias...
+Number of VSS Wires: 1963
+Number of VSS Vias: 3516
+Number of VSS Terminals: 0
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 0 seconds.
+fc_shell> 
