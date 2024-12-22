@@ -1,6 +1,3 @@
-setup.tcl
-
-
 lappend search_path scripts design_data
 
 set TECH_FILE     "../ref/tech/saed32nm_1p9m.tf"
